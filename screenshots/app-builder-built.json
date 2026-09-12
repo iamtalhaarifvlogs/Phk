@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Purple Hearts Karachi Models 03210855593 | Film & Fashion Talent",
+      "hasCanvas": false,
+      "bodyTextLen": 3664,
+      "bodyTextHash": "02558ce844ace53f5b1de81f5042c02084c457176822fe2161ec133291ca7bbf",
+      "bodyTextPrefix": "PURPLE HEARTS KARACHI Home Talent Services Karachi Work About Co",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Purple Hearts Karachi Models 03210855593 | Film & Fashion Talent",
+      "hasCanvas": false,
+      "bodyTextLen": 3574,
+      "bodyTextHash": "d544866ac24b7f0b0d0d297323b6f78cea3ef7b05d28cb596d92a1d8aec269f1",
+      "bodyTextPrefix": "Call KARACHI FILM & FASHION Purple Hearts Karachi Models 0321085",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}
