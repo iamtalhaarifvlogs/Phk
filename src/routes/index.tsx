@@ -50,10 +50,10 @@ function Home() {
           <div className="absolute inset-0 hidden bg-linear-to-r from-transparent via-bg/5 to-bg/75 md:block" />
           <div className="relative mx-auto flex min-h-[100dvh] max-w-6xl flex-col justify-end px-4 pb-20 pt-32 md:items-end md:px-8 md:text-right">
             <p className="rise text-xs tracking-[0.42em] text-primary uppercase">
-              Karachi film & fashion
+              premium escorts in Karachi 
             </p>
             <h1 className="rise mt-4 max-w-3xl font-display text-4xl text-fg md:text-5xl">
-              Purple Hearts Karachi Models{" "}
+              Escorts in Clifton Karachi 
               <a href={SITE.tel} className="block text-primary">
                 03210855593
               </a>
