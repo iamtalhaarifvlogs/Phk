@@ -28,7 +28,7 @@ export const Route = createFileRoute("/")({
       {
         name: "keywords",
         content:
-          "escorts in Clifton Karachi, escorts in DHA Karachi, independent escorts Karachi, VIP escorts Karachi, premium escorts Clifton, DHA Phase 5 escorts, hotel outcall escorts Karachi",
+          "escorts in Clifton Karachi, escorts in DHA Karachi, independent escorts Karachi, VIP escorts Karachi, premium escorts Clifton, DHA Phase 5 escorts, hotel outcall escorts Karachi, verified independent escorts DHA",
       },
     ],
   }),
@@ -186,7 +186,7 @@ function Home() {
               Independent Escorts Across Clifton, DHA & Karachi Hotels
             </h2>
             <p className="mt-4 max-w-2xl text-muted">
-              Dedicated pages and verified independent escorts for Clifton, DHA, Bahria Town, PECHS, and major hotels including PC Hotel, Marriott, Avari Towers, and Ramada Creek.
+              Dedicated coverage for independent escorts in Clifton Karachi, DHA Phase 5–8, Bahria Town, PECHS, and major hotels including PC Hotel, Marriott, Avari Towers, and Ramada Creek.
             </p>
             <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {LOCATIONS.slice(0, 6).map((loc) => (
