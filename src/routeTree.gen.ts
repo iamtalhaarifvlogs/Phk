@@ -16,6 +16,8 @@ import { Route as KarachiRouteImport } from './routes/karachi'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as TalentRouteImport } from './routes/talent'
 import { Route as WorkRouteImport } from './routes/work'
+import { Route as RobotsTxtRouteImport } from './routes/robots.txt'
+import { Route as SitemapXmlRouteImport } from './routes/sitemap.xml'
 import { Route as TalentSlugRouteImport } from './routes/talent.$slug'
 
 const IndexRoute = IndexRouteImport.update({
@@ -53,6 +55,16 @@ const WorkRoute = WorkRouteImport.update({
   path: '/work',
   getParentRoute: () => rootRouteImport,
 } as any)
+const RobotsTxtRoute = RobotsTxtRouteImport.update({
+  id: '/robots/txt',
+  path: '/robots/txt',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapXmlRoute = SitemapXmlRouteImport.update({
+  id: '/sitemap/xml',
+  path: '/sitemap/xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TalentSlugRoute = TalentSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -67,6 +79,8 @@ export interface FileRoutesByFullPath {
   '/services': typeof ServicesRoute
   '/talent': typeof TalentRouteWithChildren
   '/work': typeof WorkRoute
+  '/robots/txt': typeof RobotsTxtRoute
+  '/sitemap/xml': typeof SitemapXmlRoute
   '/talent/$slug': typeof TalentSlugRoute
 }
 export interface FileRoutesByTo {
@@ -77,6 +91,8 @@ export interface FileRoutesByTo {
   '/services': typeof ServicesRoute
   '/talent': typeof TalentRouteWithChildren
   '/work': typeof WorkRoute
+  '/robots/txt': typeof RobotsTxtRoute
+  '/sitemap/xml': typeof SitemapXmlRoute
   '/talent/$slug': typeof TalentSlugRoute
 }
 export interface FileRoutesById {
@@ -88,6 +104,8 @@ export interface FileRoutesById {
   '/services': typeof ServicesRoute
   '/talent': typeof TalentRouteWithChildren
   '/work': typeof WorkRoute
+  '/robots/txt': typeof RobotsTxtRoute
+  '/sitemap/xml': typeof SitemapXmlRoute
   '/talent/$slug': typeof TalentSlugRoute
 }
 export interface FileRouteTypes {
@@ -100,6 +118,8 @@ export interface FileRouteTypes {
     | '/services'
     | '/talent'
     | '/work'
+    | '/robots/txt'
+    | '/sitemap/xml'
     | '/talent/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -110,6 +130,8 @@ export interface FileRouteTypes {
     | '/services'
     | '/talent'
     | '/work'
+    | '/robots/txt'
+    | '/sitemap/xml'
     | '/talent/$slug'
   id:
     | '__root__'
@@ -120,6 +142,8 @@ export interface FileRouteTypes {
     | '/services'
     | '/talent'
     | '/work'
+    | '/robots/txt'
+    | '/sitemap/xml'
     | '/talent/$slug'
   fileRoutesById: FileRoutesById
 }
@@ -131,6 +155,8 @@ export interface RootRouteChildren {
   ServicesRoute: typeof ServicesRoute
   TalentRoute: typeof TalentRouteWithChildren
   WorkRoute: typeof WorkRoute
+  RobotsTxtRoute: typeof RobotsTxtRoute
+  SitemapXmlRoute: typeof SitemapXmlRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -184,6 +210,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WorkRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/robots/txt': {
+      id: '/robots/txt'
+      path: '/robots/txt'
+      fullPath: '/robots/txt'
+      preLoaderRoute: typeof RobotsTxtRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap/xml': {
+      id: '/sitemap/xml'
+      path: '/sitemap/xml'
+      fullPath: '/sitemap/xml'
+      preLoaderRoute: typeof SitemapXmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/talent/$slug': {
       id: '/talent/$slug'
       path: '/$slug'
@@ -213,6 +253,8 @@ const rootRouteChildren: RootRouteChildren = {
   ServicesRoute: ServicesRoute,
   TalentRoute: TalentRouteWithChildren,
   WorkRoute: WorkRoute,
+  RobotsTxtRoute: RobotsTxtRoute,
+  SitemapXmlRoute: SitemapXmlRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
