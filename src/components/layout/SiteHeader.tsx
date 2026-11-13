@@ -1,7 +1,5 @@
-"use client";
-
 import { useState } from "react";
-import Link from "next/link";
+import { Link } from "@tanstack/react-router";
 import { SITE } from "@/lib/site";
 
 export function SiteHeader() {
@@ -234,15 +232,15 @@ export function SiteHeader() {
 
       <header className="site-header">
         <div className="header-inner">
-          <Link href="/" className="logo">
+          <Link to="/" className="logo">
             Purple<span>Hearts</span>
           </Link>
 
           <nav className="desktop-nav">
-            <Link href="/">Home</Link>
-            <Link href="/shop">Shop</Link>
-            <Link href="/about">About</Link>
-            <Link href="/contact">Contact</Link>
+            <Link to="/">Home</Link>
+            <Link to="/shop">Shop</Link>
+            <Link to="/about">About</Link>
+            <Link to="/contact">Contact</Link>
           </nav>
 
           <button
@@ -260,10 +258,10 @@ export function SiteHeader() {
         {/* Mobile menu – solid white background for readability */}
         <div className={`mobile-menu ${isOpen ? "open" : ""}`}>
           <nav className="mobile-nav">
-            <Link href="/" onClick={() => setIsOpen(false)}>Home</Link>
-            <Link href="/shop" onClick={() => setIsOpen(false)}>Shop</Link>
-            <Link href="/about" onClick={() => setIsOpen(false)}>About</Link>
-            <Link href="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
+            <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
+            <Link to="/shop" onClick={() => setIsOpen(false)}>Shop</Link>
+            <Link to="/about" onClick={() => setIsOpen(false)}>About</Link>
+            <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
           </nav>
         </div>
 
