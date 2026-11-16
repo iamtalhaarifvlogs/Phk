@@ -262,6 +262,7 @@ export function SiteHeader() {
             <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
             <Link to="/karachi" onClick={() => setIsOpen(false)}>Premium</Link>
             <Link to="/about" onClick={() => setIsOpen(false)}>About</Link>
+<Link to="/blogs" onClick={() => setIsOpen(false)}>Must See</Link>
             <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
           </nav>
         </div>
