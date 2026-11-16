@@ -239,6 +239,7 @@ export function SiteHeader() {
           <nav className="desktop-nav">
             <Link to="/">Home</Link>
             <Link to="/karachi">Premium</Link>
+<Link to="/blogs">Must read</Link>
             <Link to="/about">About</Link>
             <Link to="/contact">Contact</Link>
           </nav>
