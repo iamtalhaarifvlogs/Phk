@@ -5,726 +5,875 @@ import { PageHero } from "@/components/layout/PageHero";
 import { CtaBand } from "@/components/layout/CtaBand";
 import { SITE } from "@/lib/site";
 
-interface BlogArticle {
-  id: string;
-  category: "Clifton & DHA" | "5-Star Hotels" | "VIP Etiquette" | "Privacy & Rates";
-  datePublished: string;
-  readTime: string;
+export interface BlogArticle {
+  slug: string;
   title: string;
-  subtitle: string;
+  excerpt: string;
+  content: string[];
+  category: "Clifton & DHA" | "5-Star Hotels" | "VIP Etiquette" | "Privacy & Rates";
+  date: string;
+  readTime: string;
+  tagBadge: string;
   keywords: string[];
-  lead: string;
   sections: {
-    heading: string;
-    body: string;
+    heading?: string;
+    paragraphs: string[];
   }[];
-  keyTakeaway: string;
 }
 
 const BLOG_ARTICLES: BlogArticle[] = [
   {
-    id: "demand-for-call-girls-in-karachi-trends",
-    category: "Privacy & Rates",
-    datePublished: "2026-11-19",
-    readTime: "4 min read",
+    slug: "demand-for-call-girls-in-karachi-trends",
     title: "Understanding the Rising Demand for Call Girls in Karachi",
-    subtitle:
-      "How corporate travel, private hospitality, and weekend evenings shape companion requests across the city.",
+    excerpt:
+      "How corporate travel, private hospitality, and weekend evenings shape the Demand for Call Girls in Karachi and requests for Karachi escorts.",
+    content: [
+      "The Demand for Call Girls in Karachi has shifted steadily toward verified, predictable arrangements as more business travelers and local hosts prioritize discretion and punctuality.",
+      "Corporate delegations, private dinners, and short business stays create steady demand for Karachi escorts and escorts in Karachi who understand refined hospitality.",
+      "When evaluating escorts in Karachi, a smaller, personally verified roster outperforms bloated catalogues. Direct confirmation on 0321 085 5593 ensures the companion you select is genuinely available for your schedule.",
+    ],
+    category: "Privacy & Rates",
+    date: "2026-11-19",
+    readTime: "4 min read",
+    tagBadge: "DEMAND & TRENDS",
     keywords: [
       "Demand for Call Girls in Karachi",
       "Karachi escorts",
       "escorts in Karachi",
-      "Purple Hearts Karachi",
     ],
-    lead:
-      "The Demand for Call Girls in Karachi has shifted steadily toward verified, predictable arrangements as more business travelers and local hosts prioritize discretion and punctuality. Rather than browsing unverified listings, discerning clients look for curated boards that deliver consistent standards.",
     sections: [
       {
         heading: "1. What Drives Evening and Weekend Requests",
-        body: "Corporate delegations, private dinners, and short business stays create steady demand for Karachi escorts who understand refined hospitality. Confirming availability early in the day helps secure preferred timing before peak evening hours.",
+        paragraphs: [
+          "The Demand for Call Girls in Karachi has shifted steadily toward verified, predictable arrangements as more business travelers and local hosts prioritize discretion and punctuality.",
+          "Corporate delegations, private dinners, and short business stays create steady demand for Karachi escorts and escorts in Karachi who understand refined hospitality.",
+        ],
       },
       {
         heading: "2. Verification Over Volume",
-        body: "When evaluating escorts in Karachi, a smaller, personally verified roster outperforms bloated catalogues. Direct confirmation on 0321 085 5593 ensures the companion you select is genuinely available for your schedule.",
+        paragraphs: [
+          "When evaluating escorts in Karachi, a smaller, personally verified roster outperforms bloated catalogues. Direct confirmation on 0321 085 5593 ensures the companion you select is genuinely available for your schedule.",
+        ],
       },
     ],
-    keyTakeaway:
-      "Peak Demand for Call Girls in Karachi occurs Thursday through Sunday—reach out on 0321 085 5593 earlier in the afternoon for priority selection.",
   },
   {
-    id: "independent-vs-agency-based-call-girls-karachi",
-    category: "Privacy & Rates",
-    datePublished: "2026-11-18",
-    readTime: "5 min read",
+    slug: "independent-vs-agency-based-call-girls-karachi",
     title: "Independent Call Girls in Karachi vs Agency-Based Call Girls",
-    subtitle:
-      "Comparing scheduling reliability, verification, and privacy between independent companions and managed talent houses.",
+    excerpt:
+      "Comparing scheduling reliability, verification, and privacy between Independent Call Girls in Karachi and Agency-Based Call Girls.",
+    content: [
+      "Choosing between Independent Call Girls in Karachi and Agency-Based Call Girls comes down to how much coordination, backup assurance, and privacy protection you want behind the scenes.",
+      "Independent Call Girls in Karachi often appeal to guests who enjoy personal rapport and flexible one-on-one arrangements, though solo schedules can shift abruptly without a central desk.",
+      "Agency-Based Call Girls managed through a single concierge line offer verified photography, punctual dispatch, and immediate alternatives if plans change at the last minute.",
+    ],
+    category: "Privacy & Rates",
+    date: "2026-11-18",
+    readTime: "5 min read",
+    tagBadge: "INDEPENDENT VS AGENCY",
     keywords: [
       "Independent Call Girls in Karachi",
       "Agency-Based Call Girls",
       "Karachi escorts",
-      "verified companions Karachi",
     ],
-    lead:
-      "Choosing between Independent Call Girls in Karachi and Agency-Based Call Girls comes down to how much coordination, backup assurance, and privacy protection you want behind the scenes.",
     sections: [
       {
         heading: "1. Direct Style of Independent Companions",
-        body: "Independent Call Girls in Karachi often appeal to guests who enjoy personal rapport and flexible one-on-one arrangements, though solo schedules can shift abruptly without a central desk.",
+        paragraphs: [
+          "Choosing between Independent Call Girls in Karachi and Agency-Based Call Girls comes down to how much coordination, backup assurance, and privacy protection you want behind the scenes.",
+          "Independent Call Girls in Karachi often appeal to guests who enjoy personal rapport and flexible one-on-one arrangements, though solo schedules can shift abruptly without a central desk.",
+        ],
       },
       {
         heading: "2. Structure and Accountability of a Curated House",
-        body: "Agency-Based Call Girls managed through a single concierge line offer verified photography, punctual dispatch, and immediate alternatives if plans change at the last minute.",
+        paragraphs: [
+          "Agency-Based Call Girls managed through a single concierge line offer verified photography, punctual dispatch, and immediate alternatives if plans change at the last minute.",
+        ],
       },
     ],
-    keyTakeaway:
-      "Purple Hearts Karachi bridges both worlds—offering independent-caliber poise backed by single-desk concierge reliability on 0321 085 5593.",
   },
   {
-    id: "premium-karachi-escorts-hospitality-standard",
-    category: "VIP Etiquette",
-    datePublished: "2026-11-17",
-    readTime: "4 min read",
+    slug: "premium-karachi-escorts-hospitality-standard",
     title: "What Defines Premium Karachi Escorts for High-Profile Evenings",
-    subtitle:
-      "Poise, conversational ease, and understated elegance for upscale dinners and private engagements.",
+    excerpt:
+      "Poise, conversational ease, and understated elegance for guests seeking premium Karachi escorts and VIP escorts in Karachi.",
+    content: [
+      "True luxury in companionship goes far beyond appearance. Guests seeking premium Karachi escorts value composed etiquette, articulate conversation, and effortless adaptability across private suites and formal venues.",
+      "Whether attending an intimate dinner or hosting in a private penthouse, VIP escorts in Karachi bring natural charm without drawing unwanted attention.",
+      "Reliable escorts in Karachi operate on transparent terms—confirming arrival windows, dress preferences, and duration clearly before dispatch.",
+    ],
+    category: "VIP Etiquette",
+    date: "2026-11-17",
+    readTime: "4 min read",
+    tagBadge: "PREMIUM & VIP",
     keywords: [
       "premium Karachi escorts",
       "VIP escorts in Karachi",
       "escorts in Karachi",
-      "luxury hospitality Karachi",
     ],
-    lead:
-      "True luxury in companionship goes far beyond appearance. Guests seeking premium Karachi escorts value composed etiquette, articulate conversation, and effortless adaptability across private suites and formal venues.",
     sections: [
       {
         heading: "1. Presence That Fits Any Setting",
-        body: "Whether attending an intimate dinner or hosting in a private penthouse, VIP escorts in Karachi bring natural charm without drawing unwanted attention.",
+        paragraphs: [
+          "True luxury in companionship goes far beyond appearance. Guests seeking premium Karachi escorts value composed etiquette, articulate conversation, and effortless adaptability across private suites and formal venues.",
+          "Whether attending an intimate dinner or hosting in a private penthouse, VIP escorts in Karachi bring natural charm without drawing unwanted attention.",
+        ],
       },
       {
         heading: "2. Clear Communication From First Inquiry",
-        body: "Reliable escorts in Karachi operate on transparent terms—confirming arrival windows, dress preferences, and duration clearly before dispatch.",
+        paragraphs: [
+          "Reliable escorts in Karachi operate on transparent terms—confirming arrival windows, dress preferences, and duration clearly before dispatch.",
+        ],
       },
     ],
-    keyTakeaway:
-      "Share the setting and tone of your evening when calling 0321 085 5593 so our desk can recommend the ideal match among our premium Karachi escorts.",
   },
   {
-    id: "karachi-escorts-near-me-safe-search-guide",
-    category: "Privacy & Rates",
-    datePublished: "2026-11-16",
-    readTime: "4 min read",
+    slug: "karachi-escorts-near-me-safe-search-guide",
     title: "Finding Karachi Escorts Near Me Safely & Discreetly",
-    subtitle:
-      "Practical steps to verify proximity, avoid bait-and-switch listings, and protect your personal details.",
+    excerpt:
+      "Practical steps to verify proximity, avoid bait-and-switch listings, and protect your personal details when searching Karachi escorts near me.",
+    content: [
+      "Searching for Karachi escorts near me when you are already settled in for the evening is common, but speed should never compromise privacy or authenticity.",
+      "Karachi traffic varies dramatically between coastal zones and central arteries. Reputable escorts in Karachi confirm realistic transit times based on your exact block or hotel rather than making empty 10-minute promises.",
+      "Avoid sharing room numbers or gate codes with unverified numbers. Dealing with one established line like 0321 085 5593 keeps your details off recycled lists for Karachi escorts.",
+    ],
+    category: "Privacy & Rates",
+    date: "2026-11-16",
+    readTime: "4 min read",
+    tagBadge: "NEAR ME • SAFETY",
     keywords: [
       "Karachi escorts near me",
       "escorts in Karachi",
       "Karachi escorts",
-      "discreet booking Karachi",
     ],
-    lead:
-      "Searching for Karachi escorts near me when you are already settled in for the evening is common, but speed should never compromise privacy or authenticity.",
     sections: [
       {
         heading: "1. Confirming Real Sector Proximity",
-        body: "Karachi traffic varies dramatically between coastal zones and central arteries. Reputable escorts in Karachi confirm realistic transit times based on your exact block or hotel rather than making empty 10-minute promises.",
+        paragraphs: [
+          "Searching for Karachi escorts near me when you are already settled in for the evening is common, but speed should never compromise privacy or authenticity.",
+          "Karachi traffic varies dramatically between coastal zones and central arteries. Reputable escorts in Karachi confirm realistic transit times based on your exact block or hotel rather than making empty 10-minute promises.",
+        ],
       },
       {
         heading: "2. Protecting Your Number and Location",
-        body: "Avoid sharing room numbers or gate codes with unverified numbers. Dealing with one established line like 0321 085 5593 keeps your details off recycled lists.",
+        paragraphs: [
+          "Avoid sharing room numbers or gate codes with unverified numbers. Dealing with one established line like 0321 085 5593 keeps your details off recycled lists for Karachi escorts.",
+        ],
       },
     ],
-    keyTakeaway:
-      "When searching Karachi escorts near me, state your general neighborhood first on 0321 085 5593 to confirm live dispatch times before sharing exact suite details.",
   },
   {
-    id: "escorts-in-clifton-karachi-coastal-guide",
-    category: "Clifton & DHA",
-    datePublished: "2026-11-15",
-    readTime: "4 min read",
+    slug: "escorts-in-clifton-karachi-coastal-guide",
     title: "Escorts in Clifton Karachi: Coastal Suites & Evening Logistics",
-    subtitle:
-      "Navigating Clifton Blocks 1–9, Bath Island, and Sea View apartments for seamless private arrivals.",
+    excerpt:
+      "Navigating Clifton Blocks 1–9, Bath Island, and Sea View apartments for seamless arrangements with escorts in Clifton Karachi.",
+    content: [
+      "From high-rise apartments overlooking Sea View to quiet residences in Bath Island, arranging escorts in Clifton Karachi benefits from local route awareness and low-profile arrival protocols.",
+      "Weekend congestion near Teen Talwar, Boat Basin, and the coastal promenade can add 15 to 20 minutes during peak dining hours. Booking slightly ahead ensures smooth arrival.",
+      "For private residences and Airbnb suites in Clifton Blocks 2, 4, 5, and 8, sharing visitor entry instructions upfront keeps arrivals effortless for Karachi escorts and escorts in Karachi.",
+    ],
+    category: "Clifton & DHA",
+    date: "2026-11-15",
+    readTime: "4 min read",
+    tagBadge: "CLIFTON GUIDE",
     keywords: [
       "escorts in Clifton Karachi",
-      "Clifton VIP companions",
       "Karachi escorts",
-      "Sea View outcalls",
+      "escorts in Karachi",
     ],
-    lead:
-      "From high-rise apartments overlooking Sea View to quiet residences in Bath Island, arranging escorts in Clifton Karachi benefits from local route awareness and low-profile arrival protocols.",
     sections: [
       {
         heading: "1. Timing Around Clifton Evening Traffic",
-        body: "Weekend congestion near Teen Talwar, Boat Basin, and the coastal promenade can add 15 to 20 minutes during peak dining hours. Booking slightly ahead ensures smooth arrival.",
+        paragraphs: [
+          "From high-rise apartments overlooking Sea View to quiet residences in Bath Island, arranging escorts in Clifton Karachi benefits from local route awareness and low-profile arrival protocols.",
+          "Weekend congestion near Teen Talwar, Boat Basin, and the coastal promenade can add 15 to 20 minutes during peak dining hours. Booking slightly ahead ensures smooth arrival.",
+        ],
       },
       {
         heading: "2. Apartment & Building Access Protocols",
-        body: "For private residences and Airbnb suites in Clifton Blocks 2, 4, 5, and 8, sharing visitor entry instructions upfront keeps arrivals effortless for Karachi escorts.",
+        paragraphs: [
+          "For private residences and Airbnb suites in Clifton Blocks 2, 4, 5, and 8, sharing visitor entry instructions upfront keeps arrivals effortless for Karachi escorts and escorts in Karachi.",
+        ],
       },
     ],
-    keyTakeaway:
-      "Specify your Clifton Block and any building reception guidelines on 0321 085 5593 for discreet 30–45 minute dispatch.",
   },
   {
-    id: "escorts-in-dha-karachi-phases-1-to-8",
-    category: "Clifton & DHA",
-    datePublished: "2026-11-14",
-    readTime: "5 min read",
+    slug: "escorts-in-dha-karachi-phases-1-to-8",
     title: "Escorts in DHA Karachi: Complete Dispatch Guide for Phases 1–8",
-    subtitle:
-      "How phase layout, commercial lanes, and coastal stretches shape outcall timing across Defence.",
+    excerpt:
+      "How phase layout, commercial lanes, and coastal stretches shape timing for escorts in dha Karachi and premium Karachi escorts.",
+    content: [
+      "Defence Housing Authority spans vast residential sectors from Phase 1 through waterfront Phase 8. Arranging escorts in dha Karachi is fastest when phase and landmark details are shared clearly.",
+      "While Phases 2, 5, and 6 sit close to central commercial hubs like Bukhari and Zamzama, Phase 8 villas require extra transit distance along the coast.",
+      "Our premium Karachi escorts arrive in private transport with understated presentation, respecting neighborhood quietness across all DHA sectors for escorts in Karachi.",
+    ],
+    category: "Clifton & DHA",
+    date: "2026-11-14",
+    readTime: "5 min read",
+    tagBadge: "DHA PHASES 1–8",
     keywords: [
       "escorts in dha Karachi",
-      "DHA Phase 8 escorts",
       "premium Karachi escorts",
       "escorts in Karachi",
     ],
-    lead:
-      "Defence Housing Authority spans vast residential sectors from Phase 1 through waterfront Phase 8. Arranging escorts in dha Karachi is fastest when phase and landmark details are shared clearly.",
     sections: [
       {
         heading: "1. Central Phases vs Phase 8 Waterfront",
-        body: "While Phases 2, 5, and 6 sit close to central commercial hubs like Bukhari and Zamzama, Phase 8 villas require extra transit distance along the coast.",
+        paragraphs: [
+          "Defence Housing Authority spans vast residential sectors from Phase 1 through waterfront Phase 8. Arranging escorts in dha Karachi is fastest when phase and landmark details are shared clearly.",
+          "While Phases 2, 5, and 6 sit close to central commercial hubs like Bukhari and Zamzama, Phase 8 villas require extra transit distance along the coast.",
+        ],
       },
       {
         heading: "2. Privacy for Private Residences",
-        body: "Our premium Karachi escorts arrive in private transport with understated presentation, respecting neighborhood quietness across all DHA sectors.",
+        paragraphs: [
+          "Our premium Karachi escorts arrive in private transport with understated presentation, respecting neighborhood quietness across all DHA sectors for escorts in Karachi.",
+        ],
       },
     ],
-    keyTakeaway:
-      "Share your exact DHA Phase and nearest main avenue on 0321 085 5593 so our coordinator can dispatch the closest verified companion.",
   },
   {
-    id: "karachi-escorts-in-gulshan-e-iqbal-guide",
-    category: "Clifton & DHA",
-    datePublished: "2026-11-13",
-    readTime: "4 min read",
+    slug: "karachi-escorts-in-gulshan-e-iqbal-guide",
     title: "Karachi Escorts in Gulshan-e-Iqbal: Central Sector Convenience",
-    subtitle:
-      "Reliable, discreet companion scheduling across Gulshan-e-Iqbal blocks, PECHS, and Bahadurabad.",
-    keywords: [
-      "karachi escorts in Gulshan e Iqbal",
-      "escorts in Karachi",
-      "Karachi escorts",
-      "central Karachi outcalls",
-    ],
-    lead:
+    excerpt:
+      "Reliable, discreet companion scheduling for karachi escorts in Gulshan e Iqbal and surrounding central areas.",
+    content: [
       "Not every guest stays near the coast. Clients arranging karachi escorts in Gulshan e Iqbal enjoy the same verified profiles and confidentiality standards available in southern districts.",
+      "University Road, Rashid Minhas Road, and Karsaz experience heavy commuter flow between 6 PM and 9 PM. Factoring this window into your booking keeps timing accurate.",
+      "Whether hosting in Gulshan-e-Iqbal Block 13-D, Bahadurabad, or nearby PECHS, our escorts in Karachi and Karachi escorts maintain strict punctuality and verified presentation.",
+    ],
+    category: "Clifton & DHA",
+    date: "2026-11-13",
+    readTime: "4 min read",
+    tagBadge: "GULSHAN-E-IQBAL",
+    keywords: [
+      "escorts in Gulshan e Iqbal",
+      "Karachi escorts",
+      "escorts in Karachi",
+    ],
     sections: [
       {
         heading: "1. Navigating Central Arteries",
-        body: "University Road, Rashid Minhas Road, and Karsaz experience heavy commuter flow between 6 PM and 9 PM. Factoring this window into your booking keeps timing accurate.",
+        paragraphs: [
+          "Not every guest stays near the coast. Clients arranging karachi escorts in Gulshan e Iqbal enjoy the same verified profiles and confidentiality standards available in southern districts.",
+          "University Road, Rashid Minhas Road, and Karsaz experience heavy commuter flow between 6 PM and 9 PM. Factoring this window into your booking keeps timing accurate.",
+        ],
       },
       {
         heading: "2. Consistent Standards Across Every Block",
-        body: "Whether hosting in Gulshan-e-Iqbal Block 13-D, Bahadurabad, or nearby PECHS, our escorts in Karachi maintain strict punctuality and verified presentation.",
+        paragraphs: [
+          "Whether hosting in Gulshan-e-Iqbal Block 13-D, Bahadurabad, or nearby PECHS, our escorts in Karachi and Karachi escorts maintain strict punctuality and verified presentation.",
+        ],
       },
     ],
-    keyTakeaway:
-      "For karachi escorts in Gulshan e Iqbal, message 0321 085 5593 at least 45 to 60 minutes prior to account for central traffic.",
   },
   {
-    id: "vip-karachi-escorts-in-pc-hotel-guide",
-    category: "5-Star Hotels",
-    datePublished: "2026-11-12",
-    readTime: "4 min read",
+    slug: "vip-karachi-escorts-in-pc-hotel-guide",
     title: "VIP Karachi Escorts in PC Hotel: Executive Suite Etiquette",
-    subtitle:
-      "Seamless, lobby-aware arrival protocols for guests staying at Pearl Continental Karachi on Club Road.",
+    excerpt:
+      "Seamless, lobby-aware arrival protocols for guests arranging vip karachi escorts in PC hotel and call girls in Karachi hotels.",
+    content: [
+      "Pearl Continental remains a preferred address for visiting executives and diplomats. Coordinating vip karachi escorts in PC hotel requires poised presentation and effortless guest-registration awareness.",
+      "Our companions dress appropriately for five-star business environments—blending naturally into executive lounges or dining areas before heading up as VIP escorts in Karachi.",
+      "Knowing PC Hotel visitor procedures ensures call girls in Karachi hotels arrive without awkward pauses or unnecessary front-desk friction.",
+    ],
+    category: "5-Star Hotels",
+    date: "2026-11-12",
+    readTime: "4 min read",
+    tagBadge: "PC HOTEL • VIP",
     keywords: [
       "vip karachi escorts in PC hotel",
-      "call girls in Karachi hotels",
-      "premium Karachi escorts",
       "VIP escorts in Karachi",
+      "call girls in Karachi hotels",
     ],
-    lead:
-      "Pearl Continental remains a preferred address for visiting executives and diplomats. Coordinating vip karachi escorts in PC hotel requires poised presentation and effortless guest-registration awareness.",
     sections: [
       {
         heading: "1. Understated Lobby & Lounge Presence",
-        body: "Our companions dress appropriately for five-star business environments—blending naturally into executive lounges or dining areas before heading up.",
+        paragraphs: [
+          "Pearl Continental remains a preferred address for visiting executives and diplomats. Coordinating vip karachi escorts in PC hotel requires poised presentation and effortless guest-registration awareness.",
+          "Our companions dress appropriately for five-star business environments—blending naturally into executive lounges or dining areas before heading up as VIP escorts in Karachi.",
+        ],
       },
       {
         heading: "2. Smooth Front-Desk Coordination",
-        body: "Knowing PC Hotel visitor procedures ensures call girls in Karachi hotels arrive without awkward pauses or unnecessary front-desk friction.",
+        paragraphs: [
+          "Knowing PC Hotel visitor procedures ensures call girls in Karachi hotels arrive without awkward pauses or unnecessary front-desk friction.",
+        ],
       },
     ],
-    keyTakeaway:
-      "Staying at Pearl Continental? Coordinate vip karachi escorts in PC hotel directly via 0321 085 5593 for smooth, lobby-aware arrival.",
   },
   {
-    id: "call-girls-in-karachi-hotels-checklist",
-    category: "5-Star Hotels",
-    datePublished: "2026-11-11",
-    readTime: "5 min read",
+    slug: "call-girls-in-karachi-hotels-checklist",
     title: "Call Girls in Karachi Hotels: A Five-Star Outcall Checklist",
-    subtitle:
-      "Essential steps for stress-free hotel visits across Marriott, Mövenpick, Avari Towers, and Ramada.",
+    excerpt:
+      "Essential steps for stress-free hotel visits involving call girls in Karachi hotels and VIP escorts in Karachi.",
+    content: [
+      "Booking call girls in Karachi hotels is straightforward when timing, guest entry rules, and session duration are aligned before dispatch.",
+      "Five-star properties such as Karachi Marriott, Mövenpick, and Avari Towers maintain attentive security. Sharing your hotel name early allows our desk to prepare smoothly.",
+      "Whether between evening meetings or after a late flight into Jinnah International, VIP escorts in Karachi and escorts in Karachi adapt to tight executive windows.",
+    ],
+    category: "5-Star Hotels",
+    date: "2026-11-11",
+    readTime: "5 min read",
+    tagBadge: "HOTEL OUTCALLS",
     keywords: [
       "call girls in Karachi hotels",
       "VIP escorts in Karachi",
       "escorts in Karachi",
-      "hotel outcall Karachi",
     ],
-    lead:
-      "Booking call girls in Karachi hotels is straightforward when timing, guest entry rules, and session duration are aligned before dispatch.",
     sections: [
       {
         heading: "1. Confirming Hotel Visitor Policies",
-        body: "Five-star properties such as Karachi Marriott, Mövenpick, and Avari Towers maintain attentive security. Sharing your hotel name early allows our desk to prepare smoothly.",
+        paragraphs: [
+          "Booking call girls in Karachi hotels is straightforward when timing, guest entry rules, and session duration are aligned before dispatch.",
+          "Five-star properties such as Karachi Marriott, Mövenpick, and Avari Towers maintain attentive security. Sharing your hotel name early allows our desk to prepare smoothly.",
+        ],
       },
       {
         heading: "2. Timing Around Business Schedules",
-        body: "Whether between evening meetings or after a late flight into Jinnah International, VIP escorts in Karachi adapt to tight executive windows.",
+        paragraphs: [
+          "Whether between evening meetings or after a late flight into Jinnah International, VIP escorts in Karachi and escorts in Karachi adapt to tight executive windows.",
+        ],
       },
     ],
-    keyTakeaway:
-      "Confirm hotel name, preferred arrival window, and duration on 0321 085 5593 for discreet call girls in Karachi hotels.",
   },
   {
-    id: "student-call-girls-in-karachi-realistic-guide",
-    category: "Privacy & Rates",
-    datePublished: "2026-11-10",
-    readTime: "4 min read",
+    slug: "student-call-girls-in-karachi-realistic-guide",
     title: "What to Know About Student Call Girls in Karachi Listings",
-    subtitle:
-      "Understanding genuine availability, evening schedules, and profile verification standards.",
+    excerpt:
+      "Understanding genuine availability, evening schedules, and verification for Student Call Girls in Karachi and Independent Call Girls in Karachi.",
+    content: [
+      "Inquiries for Student Call Girls in Karachi often reflect a preference for youthful energy, fresh conversation, and an unhurried, casual dynamic—though real availability follows academic calendars.",
+      "Unlike full-time companions, genuine adult university-aged companions have classes and exams, making evening and weekend windows the most reliable times to connect alongside Independent Call Girls in Karachi.",
+      "Many sites overuse labels without verification. Checking live availability directly ensures you meet real, verified escorts in Karachi and Karachi escorts rather than stale profiles.",
+    ],
+    category: "Privacy & Rates",
+    date: "2026-11-10",
+    readTime: "4 min read",
+    tagBadge: "STUDENT PROFILES",
     keywords: [
       "Student Call Girls in Karachi",
       "Independent Call Girls in Karachi",
       "Karachi escorts",
       "escorts in Karachi",
     ],
-    lead:
-      "Inquiries for Student Call Girls in Karachi often reflect a preference for youthful energy, fresh conversation, and an unhurried, casual dynamic—though real availability follows academic calendars.",
     sections: [
       {
         heading: "1. Limited Windows & Prior Scheduling",
-        body: "Unlike full-time companions, genuine adult university-aged companions have classes and exams, making evening and weekend windows the most reliable times to connect.",
+        paragraphs: [
+          "Inquiries for Student Call Girls in Karachi often reflect a preference for youthful energy, fresh conversation, and an unhurried, casual dynamic—though real availability follows academic calendars.",
+          "Unlike full-time companions, genuine adult university-aged companions have classes and exams, making evening and weekend windows the most reliable times to connect alongside Independent Call Girls in Karachi.",
+        ],
       },
       {
         heading: "2. Avoiding Exaggerated Online Claims",
-        body: "Many sites overuse labels without verification. Checking live availability directly ensures you meet real, verified escorts in Karachi rather than stale profiles.",
+        paragraphs: [
+          "Many sites overuse labels without verification. Checking live availability directly ensures you meet real, verified escorts in Karachi and Karachi escorts rather than stale profiles.",
+        ],
       },
     ],
-    keyTakeaway:
-      "Ask our desk on 0321 085 5593 for currently active evening profiles rather than relying on unverified directory tags.",
   },
   {
-    id: "elite-and-vip-call-girls-karachi-comparison",
-    category: "VIP Etiquette",
-    datePublished: "2026-11-09",
-    readTime: "4 min read",
+    slug: "elite-and-vip-call-girls-karachi-comparison",
     title: "Elite and VIP Call Girls: What Distinguishes Top-Tier Companions",
-    subtitle:
-      "How styling, multilingual fluency, and social grace elevate extended engagements.",
+    excerpt:
+      "How styling, conversational ease, and poise define Elite and VIP Call Girls, VIP escorts in Karachi, and premium Karachi escorts.",
+    content: [
+      "The distinction behind Elite and VIP Call Girls lies in versatility—companions who are equally comfortable at a formal business dinner, an art preview, or a private coastal suite.",
+      "International guests appreciate VIP escorts in Karachi who communicate smoothly and bring polished social presence.",
+      "From classic evening wear to understated casual elegance, premium Karachi escorts tailor their presentation to match your venue among Karachi escorts.",
+    ],
+    category: "VIP Etiquette",
+    date: "2026-11-09",
+    readTime: "4 min read",
+    tagBadge: "ELITE & VIP",
     keywords: [
       "Elite and VIP Call Girls",
       "VIP escorts in Karachi",
       "premium Karachi escorts",
       "Karachi escorts",
     ],
-    lead:
-      "The distinction behind Elite and VIP Call Girls lies in versatility—companions who are equally comfortable at a formal business dinner, an art preview, or a private coastal suite.",
     sections: [
       {
-        heading: "1. Conversational Depth & Multilingual Ease",
-        body: "International guests appreciate VIP escorts in Karachi who speak fluent English and Urdu, making dinner conversation effortless and engaging.",
+        heading: "1. Conversational Depth & Poise",
+        paragraphs: [
+          "The distinction behind Elite and VIP Call Girls lies in versatility—companions who are equally comfortable at a formal business dinner, an art preview, or a private coastal suite.",
+          "International guests appreciate VIP escorts in Karachi who communicate smoothly and bring polished social presence.",
+        ],
       },
       {
         heading: "2. Curated Styling & Presentation",
-        body: "From classic evening wear to understated casual elegance, premium Karachi escorts tailor their presentation to match your venue.",
+        paragraphs: [
+          "From classic evening wear to understated casual elegance, premium Karachi escorts tailor their presentation to match your venue among Karachi escorts.",
+        ],
       },
     ],
-    keyTakeaway:
-      "Request our Elite and VIP Call Girls shortlist on 0321 085 5593 when planning dinner dates or extended overnight engagements.",
   },
   {
-    id: "celebrity-escorts-in-karachi-authenticity-guide",
-    category: "VIP Etiquette",
-    datePublished: "2026-11-08",
-    readTime: "4 min read",
+    slug: "celebrity-escorts-in-karachi-authenticity-guide",
     title: "Celebrity Escorts in Karachi: Separating Real Talent From Hype",
-    subtitle:
-      "Why genuine model-caliber presence beats unrealistic online claims every time.",
+    excerpt:
+      "Why genuine model-caliber presence beats unrealistic claims around celebrity escorts in Karachi and premium Karachi escorts.",
+    content: [
+      "Searches for celebrity escorts in Karachi often lead to sites making exaggerated claims. Real poise and verified details matter far more than empty hype.",
+      "Evaluating genuine presentation alongside premium Karachi escorts helps guests set realistic expectations before booking.",
+      "High-discretion guests and verified escorts in Karachi both rely on clear boundaries, mutual privacy, and accurate profiles.",
+    ],
+    category: "VIP Etiquette",
+    date: "2026-11-08",
+    readTime: "4 min read",
+    tagBadge: "AUTHENTICITY",
     keywords: [
       "celebrity escorts in Karachi",
       "premium Karachi escorts",
       "escorts in Karachi",
-      "Purple Hearts Karachi",
     ],
-    lead:
-      "Searches for celebrity escorts in Karachi often lead to sites making exaggerated claims. At a true talent house, real runway, commercial, and editorial poise speaks louder than empty hype.",
     sections: [
       {
-        heading: "1. Camera-Ready Model Standards",
-        body: "Purple Hearts Karachi curates faces with genuine fashion and screen presence—offering the glamour people associate with celebrity escorts in Karachi alongside verified authenticity.",
+        heading: "1. Camera-Ready Standards vs. Online Hype",
+        paragraphs: [
+          "Searches for celebrity escorts in Karachi often lead to sites making exaggerated claims. Real poise and verified details matter far more than empty hype.",
+          "Evaluating genuine presentation alongside premium Karachi escorts helps guests set realistic expectations before booking.",
+        ],
       },
       {
         heading: "2. Strict Non-Disclosure & Mutual Privacy",
-        body: "High-profile companions require high-discretion guests. No photography, no social media tagging, and zero third-party sharing protect everyone involved.",
+        paragraphs: [
+          "High-discretion guests and verified escorts in Karachi both rely on clear boundaries, mutual privacy, and accurate profiles.",
+        ],
       },
     ],
-    keyTakeaway:
-      "Experience genuine model-tier companionship without exaggerated claims—connect discreetly on 0321 085 5593.",
   },
   {
-    id: "marriott-hotel-karachi-vip-outcall-protocol",
+    slug: "marriott-hotel-karachi-vip-outcall-protocol",
+    title: "Arranging VIP Escorts in Karachi Near Marriott & Central Hotels",
+    excerpt:
+      "Discreet coordination for call girls in Karachi hotels, VIP escorts in Karachi, and premium Karachi escorts.",
+    content: [
+      "Central business properties host visiting executives who value punctual, discreet outcall hospitality after demanding workdays.",
+      "Central positioning allows VIP escorts in Karachi to reach key venues smoothly from both Clifton and Defence.",
+      "Whether booking a short evening session or a full-night stay, call girls in Karachi hotels and premium Karachi escorts work best with clear arrival windows.",
+    ],
     category: "5-Star Hotels",
-    datePublished: "2026-11-07",
+    date: "2026-11-07",
     readTime: "4 min read",
-    title: "Arranging VIP Escorts in Karachi Near Marriott & Abdullah Haroon Road",
-    subtitle:
-      "Discreet companion coordination for business travelers staying near Saddar, Civil Lines, and Clifton.",
+    tagBadge: "5-STAR OUTCALLS",
     keywords: [
       "call girls in Karachi hotels",
       "VIP escorts in Karachi",
       "premium Karachi escorts",
-      "escorts in Clifton Karachi",
     ],
-    lead:
-      "Positioned between the central business district and Clifton, Karachi Marriott hosts international executives who value punctual, discreet outcall hospitality after demanding workdays.",
     sections: [
       {
         heading: "1. Fast Access From Clifton & DHA",
-        body: "Its central location allows our VIP escorts in Karachi to reach the property quickly from both Clifton and Defence.",
+        paragraphs: [
+          "Central business properties host visiting executives who value punctual, discreet outcall hospitality after demanding workdays.",
+          "Central positioning allows VIP escorts in Karachi to reach key venues smoothly from both Clifton and Defence.",
+        ],
       },
       {
         heading: "2. Quiet, Unhurried Evening Pacing",
-        body: "Whether booking a two-hour unwind session or a full-night stay, call girls in Karachi hotels arrive prepared and respectful of your schedule.",
+        paragraphs: [
+          "Whether booking a short evening session or a full-night stay, call girls in Karachi hotels and premium Karachi escorts work best with clear arrival windows.",
+        ],
       },
     ],
-    keyTakeaway:
-      "Message 0321 085 5593 with your preferred evening slot for prompt arrival at Marriott and nearby Civil Lines hotels.",
   },
   {
-    id: "clifton-and-dha-overnight-companionship-planning",
-    category: "Clifton & DHA",
-    datePublished: "2026-11-06",
-    readTime: "5 min read",
+    slug: "clifton-and-dha-overnight-companionship-planning",
     title: "Planning Overnight Stays With Escorts in DHA Karachi & Clifton",
-    subtitle:
-      "How to structure extended evening-to-morning engagements for maximum comfort and clarity.",
+    excerpt:
+      "How to structure extended evening-to-morning plans with escorts in dha Karachi, escorts in Clifton Karachi, and Elite and VIP Call Girls.",
+    content: [
+      "Extended overnight arrangements allow a relaxed, unhurried pace—combining dinner, conversation, and private downtime across DHA or Clifton.",
+      "Clear start and morning wrap windows ensure both host and companion enjoy a smooth, comfortable experience when arranging escorts in dha Karachi or escorts in Clifton Karachi.",
+      "Confirming arrival details in advance and maintaining polite communication set the tone for Elite and VIP Call Girls and Karachi escorts.",
+    ],
+    category: "Clifton & DHA",
+    date: "2026-11-06",
+    readTime: "5 min read",
+    tagBadge: "DHA & CLIFTON",
     keywords: [
       "escorts in dha Karachi",
       "escorts in Clifton Karachi",
       "Elite and VIP Call Girls",
       "Karachi escorts",
     ],
-    lead:
-      "Extended overnight arrangements allow a relaxed, unhurried pace—combining dinner, conversation, and private downtime across DHA Phases 5–8 or Clifton.",
     sections: [
       {
         heading: "1. Confirming Start and Wrap Times",
-        body: "Clear start and morning wrap windows ensure both host and companion enjoy a smooth, comfortable experience without ambiguity.",
+        paragraphs: [
+          "Extended overnight arrangements allow a relaxed, unhurried pace—combining dinner, conversation, and private downtime across DHA or Clifton.",
+          "Clear start and morning wrap windows ensure both host and companion enjoy a smooth, comfortable experience when arranging escorts in dha Karachi or escorts in Clifton Karachi.",
+        ],
       },
       {
         heading: "2. Hospitality Details That Elevate the Night",
-        body: "Arranging light refreshments, confirming residence entry in advance, and maintaining polite communication set the tone for Elite and VIP Call Girls.",
+        paragraphs: [
+          "Confirming arrival details in advance and maintaining polite communication set the tone for Elite and VIP Call Girls and Karachi escorts.",
+        ],
       },
     ],
-    keyTakeaway:
-      "Book overnight engagements with escorts in dha Karachi or escorts in Clifton Karachi ahead of time on 0321 085 5593.",
   },
   {
-    id: "short-notice-karachi-escorts-near-me-tips",
+    slug: "short-notice-karachi-escorts-near-me-tips",
+    title: "Same-Hour Bookings: Fast Dispatch When Searching Karachi Escorts Near Me",
+    excerpt:
+      "Simple habits that improve response times when searching Karachi escorts near me and Karachi escorts.",
+    content: [
+      "When plans open up unexpectedly, searching Karachi escorts near me works best when your initial inquiry includes the three details every coordinator needs.",
+      "Providing your neighborhood, desired arrival time, and duration lets available Karachi escorts and escorts in Karachi be checked accurately.",
+      "Keeping phone or WhatsApp notifications active ensures smooth handoff once arrival timing is confirmed.",
+    ],
     category: "Privacy & Rates",
-    datePublished: "2026-11-05",
+    date: "2026-11-05",
     readTime: "3 min read",
-    title: "Same-Hour Bookings: How to Get Fast Dispatch When Searching Karachi Escorts Near Me",
-    subtitle:
-      "Simple habits that cut confirmation time down to minutes during busy evenings.",
+    tagBadge: "SAME-HOUR TIPS",
     keywords: [
       "Karachi escorts near me",
       "Karachi escorts",
       "escorts in Karachi",
-      "fast dispatch Karachi",
     ],
-    lead:
-      "When plans open up unexpectedly, searching Karachi escorts near me works best when your initial inquiry includes the three details every coordinator needs.",
     sections: [
       {
         heading: "1. Share Area, Time, and Duration Upfront",
-        body: "Providing your neighborhood (such as DHA Phase 6, Clifton Block 4, or PC Hotel), desired arrival time, and duration lets our desk match available Karachi escorts immediately.",
+        paragraphs: [
+          "When plans open up unexpectedly, searching Karachi escorts near me works best when your initial inquiry includes the three details every coordinator needs.",
+          "Providing your neighborhood, desired arrival time, and duration lets available Karachi escorts and escorts in Karachi be checked accurately.",
+        ],
       },
       {
         heading: "2. Stay Reachable for Arrival Confirmation",
-        body: "Keeping WhatsApp or phone notifications active ensures smooth handoff once your companion reaches the gate or lobby.",
+        paragraphs: [
+          "Keeping phone or WhatsApp notifications active ensures smooth handoff once arrival timing is confirmed.",
+        ],
       },
     ],
-    keyTakeaway:
-      "Send area + timing + duration in one message to 0321 085 5593 for the fastest response on Karachi escorts near me.",
   },
   {
-    id: "etiquette-and-mutual-respect-premium-karachi-escorts",
-    category: "VIP Etiquette",
-    datePublished: "2026-11-04",
-    readTime: "4 min read",
+    slug: "etiquette-and-mutual-respect-premium-karachi-escorts",
     title: "The Gentleman’s Code: Etiquette With Premium Karachi Escorts",
-    subtitle:
-      "Why courtesy, clear boundaries, and punctuality create unforgettable private experiences.",
+    excerpt:
+      "Why courtesy, clear boundaries, and punctuality matter with premium Karachi escorts, Independent Call Girls in Karachi, and Agency-Based Call Girls.",
+    content: [
+      "Whether connecting with Independent Call Girls in Karachi or Agency-Based Call Girls, mutual respect and clear boundaries transform a standard booking into a smoother evening.",
+      "Honoring agreed session durations and boundaries builds immediate trust and clarity with premium Karachi escorts.",
+      "Polite, straightforward communication ensures every expectation is met cleanly for escorts in Karachi.",
+    ],
+    category: "VIP Etiquette",
+    date: "2026-11-04",
+    readTime: "4 min read",
+    tagBadge: "ETIQUETTE CODE",
     keywords: [
       "premium Karachi escorts",
       "Independent Call Girls in Karachi",
       "Agency-Based Call Girls",
       "escorts in Karachi",
     ],
-    lead:
-      "Whether connecting with Independent Call Girls in Karachi or Agency-Based Call Girls, mutual respect and clear boundaries are what transform a standard booking into an effortless, memorable evening.",
     sections: [
       {
         heading: "1. Respecting Agreed Terms and Timing",
-        body: "Honoring agreed session durations and boundaries builds immediate trust and warmth with premium Karachi escorts.",
+        paragraphs: [
+          "Whether connecting with Independent Call Girls in Karachi or Agency-Based Call Girls, mutual respect and clear boundaries transform a standard booking into a smoother evening.",
+          "Honoring agreed session durations and boundaries builds immediate trust and clarity with premium Karachi escorts.",
+        ],
       },
       {
         heading: "2. Direct, Courteous Communication",
-        body: "Polite, straightforward communication through our official concierge line ensures every expectation is met cleanly.",
+        paragraphs: [
+          "Polite, straightforward communication ensures every expectation is met cleanly for escorts in Karachi.",
+        ],
       },
     ],
-    keyTakeaway:
-      "Treat every engagement with courtesy and clarity—our desk on 0321 085 5593 is always available to assist with special requests.",
   },
   {
-    id: "gulshan-pechs-bahadurabad-evening-outcalls",
+    slug: "gulshan-pechs-bahadurabad-evening-outcalls",
+    title: "Central Karachi Outcalls: Escorts in Gulshan e Iqbal & Nearby Hubs",
+    excerpt:
+      "Companion scheduling across central sectors for escorts in Gulshan e Iqbal, VIP escorts in Karachi, and Karachi escorts.",
+    content: [
+      "Clients residing or hosting in central Karachi benefit from clear route timing when arranging escorts in Gulshan e Iqbal and adjacent neighborhoods.",
+      "Private travel and clear landmark directions support discreet arrival across central residential blocks and business spots for VIP escorts in Karachi.",
+      "Consistent privacy practices and upfront timing apply across central engagements just as they do elsewhere for Karachi escorts and escorts in Karachi.",
+    ],
     category: "Clifton & DHA",
-    datePublished: "2026-11-03",
+    date: "2026-11-03",
     readTime: "4 min read",
-    title: "Central Karachi Outcalls: Gulshan-e-Iqbal, PECHS & Bahadurabad",
-    subtitle:
-      "Extending verified VIP companion service beyond coastal sectors into central residential hubs.",
+    tagBadge: "CENTRAL KARACHI",
     keywords: [
-      "karachi escorts in Gulshan e Iqbal",
-      "escorts in Karachi",
+      "escorts in Gulshan e Iqbal",
       "VIP escorts in Karachi",
       "Karachi escorts",
+      "escorts in Karachi",
     ],
-    lead:
-      "Clients residing or hosting in central Karachi no longer need to settle for unverified local listings. Our network covers karachi escorts in Gulshan e Iqbal, PECHS, and Bahadurabad with full verification.",
     sections: [
       {
-        heading: "1. Discreet Arrival in Residential Blocks",
-        body: "Our companions travel privately and arrive at residential apartments or boutique hotels across central Karachi with complete discretion.",
+        heading: "1. Discreet Arrival in Central Blocks",
+        paragraphs: [
+          "Clients residing or hosting in central Karachi benefit from clear route timing when arranging escorts in Gulshan e Iqbal and adjacent neighborhoods.",
+          "Private travel and clear landmark directions support discreet arrival across central residential blocks and business spots for VIP escorts in Karachi.",
+        ],
       },
       {
-        heading: "2. Same Board, Same Privacy Guarantees",
-        body: "Every booking in Gulshan-e-Iqbal or PECHS follows the exact same zero-log privacy protocol as our DHA and Clifton engagements.",
+        heading: "2. Consistent Standards & Privacy",
+        paragraphs: [
+          "Consistent privacy practices and upfront timing apply across central engagements just as they do elsewhere for Karachi escorts and escorts in Karachi.",
+        ],
       },
     ],
-    keyTakeaway:
-      "Call or WhatsApp 0321 085 5593 to confirm live dispatch times for karachi escorts in Gulshan e Iqbal and surrounding central areas.",
   },
   {
-    id: "pc-hotel-and-club-road-corporate-hospitality",
-    category: "5-Star Hotels",
-    datePublished: "2026-11-02",
-    readTime: "4 min read",
+    slug: "pc-hotel-and-club-road-corporate-hospitality",
     title: "Corporate Hospitality at Club Road: VIP Karachi Escorts in PC Hotel",
-    subtitle:
-      "Tailored companion arrangements for visiting executives, conference speakers, and international guests.",
+    excerpt:
+      "Tailored companion coordination for vip karachi escorts in PC hotel, call girls in Karachi hotels, and Elite and VIP Call Girls.",
+    content: [
+      "For executives visiting Karachi for summits or board meetings, arranging vip karachi escorts in PC hotel offers refined company around Club Road.",
+      "Flight delays and late dinners are common during business trips, making flexible arrival coordination helpful for call girls in Karachi hotels.",
+      "Poised conversation and polished presentation suit five-star dining rooms for Elite and VIP Call Girls and premium Karachi escorts.",
+    ],
+    category: "5-Star Hotels",
+    date: "2026-11-02",
+    readTime: "4 min read",
+    tagBadge: "CORPORATE • PC HOTEL",
     keywords: [
       "vip karachi escorts in PC hotel",
       "call girls in Karachi hotels",
       "Elite and VIP Call Girls",
       "premium Karachi escorts",
     ],
-    lead:
-      "For executives flying into Karachi for summits or board meetings, arranging vip karachi escorts in PC hotel offers refined company without leaving the comfort of Club Road.",
     sections: [
       {
-        heading: "1. Punctual Coordination Around Flight & Meeting Schedules",
-        body: "Flight delays and late dinners are common during business trips. Our concierge adjusts arrival timing smoothly when your schedule shifts.",
+        heading: "1. Punctual Coordination Around Travel Schedules",
+        paragraphs: [
+          "For executives visiting Karachi for summits or board meetings, arranging vip karachi escorts in PC hotel offers refined company around Club Road.",
+          "Flight delays and late dinners are common during business trips, making flexible arrival coordination helpful for call girls in Karachi hotels.",
+        ],
       },
       {
         heading: "2. Poised Dinner and Lounge Companionship",
-        body: "Our Elite and VIP Call Girls bring effortless conversation and polished styling suited to five-star dining rooms.",
+        paragraphs: [
+          "Poised conversation and polished presentation suit five-star dining rooms for Elite and VIP Call Girls and premium Karachi escorts.",
+        ],
       },
     ],
-    keyTakeaway:
-      "Coordinate vip karachi escorts in PC hotel on 0321 085 5593 with flexible scheduling built around executive itineraries.",
   },
   {
-    id: "student-and-independent-profiles-verification-standards",
+    slug: "student-and-independent-profiles-verification-standards",
+    title: "Verifying Student Call Girls in Karachi & Independent Profiles",
+    excerpt:
+      "Why verification matters across Student Call Girls in Karachi, Independent Call Girls in Karachi, and Agency-Based Call Girls.",
+    content: [
+      "Whether browsing Independent Call Girls in Karachi, Student Call Girls in Karachi, or Agency-Based Call Girls, verification protects your time and expectations.",
+      "Confirming current appearance and genuine availability helps avoid outdated listings and mismatched expectations.",
+      "Clear confirmation before dispatch ensures accurate details for escorts in Karachi and Karachi escorts.",
+    ],
     category: "Privacy & Rates",
-    datePublished: "2026-11-01",
+    date: "2026-11-01",
     readTime: "4 min read",
-    title: "How Purple Hearts Verifies Independent & Student Call Girls in Karachi",
-    subtitle:
-      "Inside our in-person screening process that eliminates fake photos and outdated catalogues.",
+    tagBadge: "VERIFICATION",
     keywords: [
       "Student Call Girls in Karachi",
       "Independent Call Girls in Karachi",
       "Agency-Based Call Girls",
+      "escorts in Karachi",
       "Karachi escorts",
     ],
-    lead:
-      "Whether browsing Independent Call Girls in Karachi, Student Call Girls in Karachi, or full-time Agency-Based Call Girls, verification is the single factor that protects your time and expectations.",
     sections: [
       {
-        heading: "1. In-Person Screening & Current Photography",
-        body: "Every companion on our board meets our team in person before going live, ensuring current, accurate appearance and genuine demeanor.",
+        heading: "1. Screening & Current Profiles",
+        paragraphs: [
+          "Whether browsing Independent Call Girls in Karachi, Student Call Girls in Karachi, or Agency-Based Call Girls, verification protects your time and expectations.",
+          "Confirming current appearance and genuine availability helps avoid outdated listings and mismatched expectations.",
+        ],
       },
       {
-        heading: "2. Zero Bait-and-Switch Guarantee",
-        body: "You never have to worry about someone different arriving at your door—every confirmation on 0321 085 5593 is locked to the exact profile selected.",
+        heading: "2. Accurate Confirmation Before Dispatch",
+        paragraphs: [
+          "Clear confirmation before dispatch ensures accurate details for escorts in Karachi and Karachi escorts.",
+        ],
       },
     ],
-    keyTakeaway:
-      "Choose verified accountability over guesswork—confirm your selection directly with Purple Hearts Karachi on 0321 085 5593.",
   },
   {
-    id: "peak-demand-for-call-girls-in-karachi-booking-strategy",
+    slug: "peak-demand-for-call-girls-in-karachi-booking-strategy",
+    title: "Navigating Peak Demand for Call Girls in Karachi: Booking Strategy",
+    excerpt:
+      "How to plan around peak Demand for Call Girls in Karachi, celebrity escorts in Karachi, VIP escorts in Karachi, and call girls in Karachi hotels.",
+    content: [
+      "During wedding seasons, corporate conferences, and long weekends, the Demand for Call Girls in Karachi rises sharply across hotels and residential sectors.",
+      "Reaching out earlier in the day gives better selection among VIP escorts in Karachi and more realistic timing around celebrity escorts in Karachi inquiries.",
+      "Advance confirmation helps coordinate smoother schedules for call girls in Karachi hotels and private visits alike.",
+    ],
     category: "Privacy & Rates",
-    datePublished: "2026-10-30",
+    date: "2026-10-30",
     readTime: "4 min read",
-    title: "Navigating Peak Demand for Call Girls in Karachi: Smart Booking Strategy",
-    subtitle:
-      "How to secure top-tier companions during weekends, holidays, and major city events.",
+    tagBadge: "PEAK STRATEGY",
     keywords: [
       "Demand for Call Girls in Karachi",
       "celebrity escorts in Karachi",
       "VIP escorts in Karachi",
       "call girls in Karachi hotels",
     ],
-    lead:
-      "During wedding seasons, corporate conferences, and long weekends, the Demand for Call Girls in Karachi rises sharply across five-star hotels and coastal residences.",
     sections: [
       {
-        heading: "1. Why Afternoon Inquiries Secure the Best Roster",
-        body: "Reaching out between 2 PM and 6 PM gives you first choice among our most requested VIP escorts in Karachi and model-tier companions.",
+        heading: "1. Why Earlier Inquiries Improve Selection",
+        paragraphs: [
+          "During wedding seasons, corporate conferences, and long weekends, the Demand for Call Girls in Karachi rises sharply across hotels and residential sectors.",
+          "Reaching out earlier in the day gives better selection among VIP escorts in Karachi and more realistic timing around celebrity escorts in Karachi inquiries.",
+        ],
       },
       {
         heading: "2. Seamless Coordination Across Hotels & Residences",
-        body: "Whether booking call girls in Karachi hotels or private residences in DHA and Clifton, advance confirmation locks your preferred slot.",
+        paragraphs: [
+          "Advance confirmation helps coordinate smoother schedules for call girls in Karachi hotels and private visits alike.",
+        ],
       },
     ],
-    keyTakeaway:
-      "Beat peak Demand for Call Girls in Karachi by messaging 0321 085 5593 early in the day to reserve your preferred evening window.",
   },
   {
-    id: "clifton-dha-vip-companionship-guide",
+    slug: "clifton-dha-vip-companionship-guide",
+    title: "Guide to VIP Companions in Clifton & DHA Phase 5–8",
+    excerpt:
+      "How clients plan discreet visits with escorts in Clifton Karachi, escorts in dha Karachi, and VIP escorts in Karachi.",
+    content: [
+      "Across Clifton and DHA Phases 5 through 8, expectations around hospitality, punctuality, and privacy are central to every arrangement.",
+      "Confirming the exact block or phase along with preferred duration helps coordinate timely arrival for escorts in Clifton Karachi and escorts in dha Karachi.",
+      "From short evening visits to overnight stays, clear communication with VIP escorts in Karachi and premium Karachi escorts prevents last-minute confusion.",
+    ],
     category: "Clifton & DHA",
-    datePublished: "2026-11-16",
+    date: "2026-11-16",
     readTime: "5 min read",
-    title: "The Definitive Guide to Verified VIP Companions in Clifton & DHA Phase 5–8",
-    subtitle:
-      "How discerning clients arrange discreet, verified independent companionship across Karachi’s premier coastal and residential districts.",
+    tagBadge: "CLIFTON & DHA",
     keywords: [
-      "Escorts in Clifton Karachi",
-      "VIP Companions DHA Phase 6",
-      "Independent Models Karachi",
-      "Purple Hearts Karachi",
+      "escorts in Clifton Karachi",
+      "escorts in dha Karachi",
+      "VIP escorts in Karachi",
+      "premium Karachi escorts",
     ],
-    lead:
-      "Across Clifton Blocks 1–9, Sea View, and DHA Phases 5 through 8, expectations around hospitality, punctuality, and privacy operate at an international standard. Whether hosting at a private penthouse or dining along the coast, choosing a verified talent house eliminates uncertainty.",
     sections: [
       {
-        heading: "1. Why Verified Boards Outperform Generic Listings",
-        body: "Unlike unverified directories that circulate outdated images, Purple Hearts Karachi maintains a curated roster where every profile is verified in person. What appears on our board is exactly who arrives at your residence or suite—ensuring poise, photogenic elegance, and genuine warmth.",
+        heading: "1. Verified Details Over Generic Listings",
+        paragraphs: [
+          "Across Clifton and DHA Phases 5 through 8, expectations around hospitality, punctuality, and privacy are central to every arrangement.",
+          "Confirming the exact block or phase along with preferred duration helps coordinate timely arrival for escorts in Clifton Karachi and escorts in dha Karachi.",
+        ],
       },
       {
-        heading: "2. Seamless Dispatch Across DHA & Clifton",
-        body: "Proximity matters in Karachi. Because our independent companions and VIP models operate directly within Clifton, DHA Phase 5, Phase 6, Phase 7, and Phase 8, confirmation via WhatsApp or direct call on 0321 085 5593 typically results in discreet arrival within 30 to 45 minutes.",
-      },
-      {
-        heading: "3. Tailored Arrangements for Short Visits or Overnight Stays",
-        body: "From two-hour evening dinner dates to full overnight companionship, every booking is structured around clear communication, mutual respect, and zero last-minute surprises.",
+        heading: "2. Short Visits & Overnight Stays",
+        paragraphs: [
+          "From short evening visits to overnight stays, clear communication with VIP escorts in Karachi and premium Karachi escorts prevents last-minute confusion.",
+        ],
       },
     ],
-    keyTakeaway:
-      "Always confirm location sector (Clifton Block or DHA Phase) and preferred duration upfront on 0321 085 5593 for immediate, priority scheduling.",
   },
   {
-    id: "five-star-hotel-outcalls-karachi",
+    slug: "five-star-hotel-outcalls-karachi",
+    title: "Five-Star Hotel Outcalls: Call Girls in Karachi Hotels & PC Hotel",
+    excerpt:
+      "What visiting guests should know about call girls in Karachi hotels, vip karachi escorts in PC hotel, and VIP escorts in Karachi.",
+    content: [
+      "Business travelers and visiting guests staying at five-star properties often look for quiet, well-timed outcall arrangements.",
+      "Sharing your hotel name and preferred timing early supports smooth coordination for call girls in Karachi hotels and vip karachi escorts in PC hotel.",
+      "Whether planning a short evening break or an extended stay, VIP escorts in Karachi and Karachi escorts benefit from clear schedule details.",
+    ],
     category: "5-Star Hotels",
-    datePublished: "2026-11-12",
+    date: "2026-11-12",
     readTime: "4 min read",
-    title: "Five-Star Hotel Outcalls in Karachi: PC Hotel, Marriott & Mövenpick Protocol",
-    subtitle:
-      "Everything visiting corporate executives and international travelers need to know about smooth, confidential hotel suite visits.",
+    tagBadge: "5-STAR HOTELS",
     keywords: [
-      "Hotel Outcalls Karachi",
-      "PC Hotel Escorts Karachi",
-      "Marriott Karachi VIP Companions",
-      "Executive Escort Service Karachi",
+      "call girls in Karachi hotels",
+      "vip karachi escorts in PC hotel",
+      "VIP escorts in Karachi",
+      "Karachi escorts",
     ],
-    lead:
-      "Business travelers arriving via Jinnah International Airport frequently stay at Club Road and Shahrah-e-Faisal landmarks including Pearl Continental (PC) Hotel, Karachi Marriott, Mövenpick, and Avari Towers. Navigating five-star hotel security requires seasoned, well-presented companions.",
     sections: [
       {
-        heading: "1. Refined Presentation That Blends Into Luxury Hospitality",
-        body: "Our models dress with understated sophistication suited for five-star lobbies, executive lounges, and private dining rooms—attracting zero unwanted attention while elevating your evening.",
+        heading: "1. Low-Profile Hotel Coordination",
+        paragraphs: [
+          "Business travelers and visiting guests staying at five-star properties often look for quiet, well-timed outcall arrangements.",
+          "Sharing your hotel name and preferred timing early supports smooth coordination for call girls in Karachi hotels and vip karachi escorts in PC hotel.",
+        ],
       },
       {
-        heading: "2. Effortless Check-In & Suite Arrival",
-        body: "Simply share your hotel name and preferred timing when calling or messaging 0321 085 5593. Our coordinator handles arrival timing smoothly so you can relax in your suite without delays.",
-      },
-      {
-        heading: "3. Corporate Travel & Extended Weekend Companionship",
-        body: "For executives in Karachi on multi-day assignments, extended overnight and weekend arrangements offer consistent, intelligent company throughout your stay.",
+        heading: "2. Flexible Timing for Travelers",
+        paragraphs: [
+          "Whether planning a short evening break or an extended stay, VIP escorts in Karachi and Karachi escorts benefit from clear schedule details.",
+        ],
       },
     ],
-    keyTakeaway:
-      "Five-star hotel outcalls are available 24/7 with priority dispatch to Club Road, Clifton, and Shahrah-e-Faisal properties.",
   },
   {
-    id: "cinematic-elegance-karachi-nightlife",
+    slug: "cinematic-elegance-karachi-nightlife",
+    title: "Evening Social Scene: Elite and VIP Call Girls & Celebrity Escorts in Karachi",
+    excerpt:
+      "How ambiance, conversation, and etiquette shape evenings with Elite and VIP Call Girls, celebrity escorts in Karachi, and premium Karachi escorts.",
+    content: [
+      "Evening plans in the city range from quiet coastal drives and private dinners to social gatherings where poise and easy conversation matter.",
+      "Guests looking at Elite and VIP Call Girls or reading about celebrity escorts in Karachi do best when they match their expectations to verified, authentic profiles.",
+      "Sharing the tone of your evening in advance helps pair the right fit among premium Karachi escorts and escorts in Karachi.",
+    ],
     category: "VIP Etiquette",
-    datePublished: "2026-11-08",
+    date: "2026-11-08",
     readTime: "6 min read",
-    title: "Hollywood Finish, Karachi Light: Inside Karachi’s Private Luxury Social Scene",
-    subtitle:
-      "From Sea View sunset drives to private penthouse gatherings, how Purple Hearts brings editorial-grade poise to private companionship.",
+    tagBadge: "EVENING SCENE",
     keywords: [
-      "High Profile Models Karachi",
-      "Luxury Escorts Sea View Karachi",
-      "VIP Dinner Date Karachi",
-      "Elite Call Girls Karachi",
+      "Elite and VIP Call Girls",
+      "celebrity escorts in Karachi",
+      "premium Karachi escorts",
+      "escorts in Karachi",
     ],
-    lead:
-      "Karachi comes alive after dusk. Beyond crowded public venues lies a private circuit of penthouse dinners, coastal drives along Nishat and Bukhari Commercial, and intimate gatherings where articulate, charismatic company transforms the atmosphere.",
     sections: [
       {
-        heading: "1. Beyond Looks: Conversational Grace & Charisma",
-        body: "A true VIP companion brings more than striking aesthetics. Our board is selected for intelligence, social fluency, and warmth—making them equally comfortable at an intimate candlelit dinner or a high-profile social event.",
+        heading: "1. Conversation & Social Ease",
+        paragraphs: [
+          "Evening plans in the city range from quiet coastal drives and private dinners to social gatherings where poise and easy conversation matter.",
+          "Guests looking at Elite and VIP Call Girls or reading about celebrity escorts in Karachi do best when they match their expectations to verified, authentic profiles.",
+        ],
       },
       {
-        heading: "2. Etiquette for an Unforgettable Evening",
-        body: "Clear communication, punctuality, and mutual courtesy set the tone for an extraordinary encounter. Let our desk know the vibe of your evening—whether relaxed and intimate or glamorous and social—so we can recommend the ideal match.",
+        heading: "2. Matching Tone & Occasion",
+        paragraphs: [
+          "Sharing the tone of your evening in advance helps pair the right fit among premium Karachi escorts and escorts in Karachi.",
+        ],
       },
     ],
-    keyTakeaway:
-      "Share the occasion and preferred ambiance when booking so our house can pair you with a companion whose personality matches your evening.",
   },
   {
-    id: "client-confidentiality-and-booking-standards",
-    category: "Privacy & Rates",
-    datePublished: "2026-11-02",
-    readTime: "4 min read",
-    title: "Absolute Discretion & Transparent Standards: How Purple Hearts Protects Client Privacy",
-    subtitle:
-      "Our zero-leak privacy architecture, direct single-line booking policy, and upfront rate clarity for local and overseas clients.",
-    keywords: [
-      "Discreet Escort Agency Karachi",
-      "Verified Call Girls Karachi Rates",
-      "Safe Outcall Service DHA Karachi",
-      "24/7 Escorts Karachi",
+    slug: "client-confidentiality-and-booking-standards",
+    title: "Discretion & Transparent Standards for Karachi Escorts",
+    excerpt:
+      "How direct booking lines, privacy habits, and upfront clarity support Karachi escorts, escorts in Karachi, and VIP escorts in Karachi.",
+    content: [
+      "Privacy is central to any discreet arrangement, making direct communication and careful handling of personal details essential.",
+      "Using a single official contact line and keeping booking details confidential helps protect guests arranging Karachi escorts and escorts in Karachi.",
+      "Confirming duration, timing, and terms upfront ensures complete clarity before any outcall involving VIP escorts in Karachi or call girls in Karachi hotels.",
     ],
-    lead:
-      "Privacy is the foundation of luxury service. High-net-worth individuals, diplomats, and visiting executives choose Purple Hearts Karachi because every inquiry is handled directly through one verified desk—never outsourced to third-party brokers.",
+    category: "Privacy & Rates",
+    date: "2026-11-02",
+    readTime: "4 min read",
+    tagBadge: "PRIVACY & RATES",
+    keywords: [
+      "Karachi escorts",
+      "escorts in Karachi",
+      "VIP escorts in Karachi",
+      "call girls in Karachi hotels",
+    ],
     sections: [
       {
-        heading: "1. One Official Number on the Call Sheet",
-        body: "The number displayed across our site—0321 085 5593—connects you directly with our primary house coordinator. We never share client numbers, hotel details, or booking histories with external parties.",
+        heading: "1. Direct Contact & Privacy Protection",
+        paragraphs: [
+          "Privacy is central to any discreet arrangement, making direct communication and careful handling of personal details essential.",
+          "Using a single official contact line and keeping booking details confidential helps protect guests arranging Karachi escorts and escorts in Karachi.",
+        ],
       },
       {
-        heading: "2. Upfront Clarity With Zero Hidden Charges",
-        body: "Before confirming any outcall or overnight stay, all terms and rates are communicated transparently over WhatsApp or phone—guaranteeing complete peace of mind from start to finish.",
+        heading: "2. Upfront Clarity Before Confirmation",
+        paragraphs: [
+          "Confirming duration, timing, and terms upfront ensures complete clarity before any outcall involving VIP escorts in Karachi or call girls in Karachi hotels.",
+        ],
       },
     ],
-    keyTakeaway:
-      "Book exclusively via our official line (0321 085 5593) to ensure verified profiles, direct coordination, and strict confidentiality.",
   },
 ];
 
@@ -765,7 +914,7 @@ export const Route = createFileRoute("/blogs")({
       {
         name: "keywords",
         content:
-          "Escorts in Clifton Karachi, VIP Companions DHA Phase 5-8, Hotel Outcalls Karachi, PC Hotel Escorts, Marriott Karachi Companions, Purple Hearts Karachi Blog",
+          "Karachi escorts, escorts in Karachi, premium Karachi escorts, VIP escorts in Karachi, celebrity escorts in Karachi, call girls in Karachi hotels, Demand for Call Girls in Karachi, Independent Call Girls in Karachi, Agency-Based Call Girls, Student Call Girls in Karachi, Elite and VIP Call Girls, Karachi escorts near me, escorts in Clifton Karachi, escorts in dha Karachi, escorts in Gulshan e Iqbal, vip karachi escorts in PC hotel",
       },
       {
         property: "og:title",
@@ -815,16 +964,19 @@ function BlogsPage() {
         blogPost: BLOG_ARTICLES.map((post) => ({
           "@type": "BlogPosting",
           headline: post.title,
-          description: post.subtitle,
-          datePublished: post.datePublished,
+          description: post.excerpt,
+          datePublished: post.date,
           keywords: post.keywords.join(", "),
           author: {
             "@type": "Organization",
             name: "Purple Hearts Karachi",
           },
-          articleBody: [post.lead, ...post.sections.map((s) => `${s.heading}: ${s.body}`)].join(
-            "\n\n"
-          ),
+          articleBody: [
+            ...post.content,
+            ...post.sections.flatMap((s) =>
+              s.heading ? [s.heading, ...s.paragraphs] : s.paragraphs
+            ),
+          ].join("\n\n"),
         })),
       },
       {
@@ -895,8 +1047,8 @@ function BlogsPage() {
           >
             {filteredArticles.map((article, idx) => (
               <a
-                key={article.id}
-                href={`#${article.id}`}
+                key={article.slug}
+                href={`#${article.slug}`}
                 className="group rounded-xl bg-surface p-5 ring-1 ring-line transition hover:ring-primary/50"
               >
                 <div className="flex items-center justify-between text-xs text-primary">
@@ -917,81 +1069,102 @@ function BlogsPage() {
         </section>
 
         <section className="mx-auto max-w-4xl space-y-16 px-4 py-16 md:px-8">
-          {filteredArticles.map((article) => (
-            <article
-              key={article.id}
-              id={article.id}
-              className="scroll-mt-28 rounded-2xl bg-surface p-6 ring-1 ring-line sm:p-10"
-            >
-              <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-wider text-primary">
-                <span className="rounded-full bg-bg px-3 py-1 ring-1 ring-primary/30">
-                  {article.category}
-                </span>
-                <span className="text-muted">•</span>
-                <time dateTime={article.datePublished} className="text-muted">
-                  {article.datePublished}
-                </time>
-                <span className="text-muted">•</span>
-                <span className="text-muted">{article.readTime}</span>
-              </div>
+          {filteredArticles.map((article) => {
+            const keyTakeaway =
+              article.sections[article.sections.length - 1]?.paragraphs[
+                article.sections[article.sections.length - 1].paragraphs.length - 1
+              ] ?? article.excerpt;
 
-              <h2 className="mt-4 font-display text-2xl leading-tight text-fg sm:text-4xl">
-                {article.title}
-              </h2>
-              <p className="mt-3 text-base font-medium text-primary/90 sm:text-lg">
-                {article.subtitle}
-              </p>
-
-              <p className="mt-6 border-b border-line pb-6 text-base leading-relaxed text-muted">
-                {article.lead}
-              </p>
-
-              <div className="mt-6 space-y-6">
-                {article.sections.map((sec) => (
-                  <div key={sec.heading}>
-                    <h3 className="font-display text-xl text-fg">{sec.heading}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-muted sm:text-base">
-                      {sec.body}
-                    </p>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-8 rounded-xl bg-bg p-5 ring-1 ring-primary/30">
-                <p className="text-xs font-semibold uppercase tracking-wider text-primary">
-                  House Note
-                </p>
-                <p className="mt-1 text-sm text-fg">{article.keyTakeaway}</p>
-                <div className="mt-4 flex flex-wrap items-center gap-3">
-                  <a
-                    href={`tel:${SITE.phoneLocal}`}
-                    className="rounded-full bg-primary px-5 py-2 text-xs font-semibold text-bg transition hover:opacity-90"
-                  >
-                    Call {SITE.phoneDisplay}
-                  </a>
-                  <a
-                    href={`https://wa.me/92${SITE.phoneLocal.replace(/^0/, "")}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-full bg-surface px-5 py-2 text-xs font-semibold text-fg ring-1 ring-line transition hover:ring-primary/50"
-                  >
-                    WhatsApp Concierge ↗
-                  </a>
-                </div>
-              </div>
-
-              <div className="mt-6 flex flex-wrap gap-2">
-                {article.keywords.map((kw) => (
-                  <span
-                    key={kw}
-                    className="rounded-md bg-bg px-2.5 py-1 text-[11px] text-muted ring-1 ring-line"
-                  >
-                    #{kw}
+            return (
+              <article
+                key={article.slug}
+                id={article.slug}
+                className="scroll-mt-28 rounded-2xl bg-surface p-6 ring-1 ring-line sm:p-10"
+              >
+                <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-wider text-primary">
+                  <span className="rounded-full bg-bg px-3 py-1 ring-1 ring-primary/30">
+                    {article.category}
                   </span>
-                ))}
-              </div>
-            </article>
-          ))}
+                  <span className="rounded-full bg-bg px-3 py-1 text-muted ring-1 ring-line">
+                    {article.tagBadge}
+                  </span>
+                  <span className="text-muted">•</span>
+                  <time dateTime={article.date} className="text-muted">
+                    {article.date}
+                  </time>
+                  <span className="text-muted">•</span>
+                  <span className="text-muted">{article.readTime}</span>
+                </div>
+
+                <h2 className="mt-4 font-display text-2xl leading-tight text-fg sm:text-4xl">
+                  {article.title}
+                </h2>
+                <p className="mt-3 text-base font-medium text-primary/90 sm:text-lg">
+                  {article.excerpt}
+                </p>
+
+                <div className="mt-6 space-y-4 border-b border-line pb-6 text-base leading-relaxed text-muted">
+                  {article.content.map((para, index) => (
+                    <p key={index}>{para}</p>
+                  ))}
+                </div>
+
+                <div className="mt-6 space-y-6">
+                  {article.sections.map((sec, secIndex) => (
+                    <div key={sec.heading ?? secIndex}>
+                      {sec.heading && (
+                        <h3 className="font-display text-xl text-fg">{sec.heading}</h3>
+                      )}
+                      <div className="mt-2 space-y-3">
+                        {sec.paragraphs.map((pText, pIdx) => (
+                          <p
+                            key={pIdx}
+                            className="text-sm leading-relaxed text-muted sm:text-base"
+                          >
+                            {pText}
+                          </p>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-8 rounded-xl bg-bg p-5 ring-1 ring-primary/30">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-primary">
+                    House Note
+                  </p>
+                  <p className="mt-1 text-sm text-fg">{keyTakeaway}</p>
+                  <div className="mt-4 flex flex-wrap items-center gap-3">
+                    <a
+                      href={`tel:${SITE.phoneLocal}`}
+                      className="rounded-full bg-primary px-5 py-2 text-xs font-semibold text-bg transition hover:opacity-90"
+                    >
+                      Call {SITE.phoneDisplay}
+                    </a>
+                    <a
+                      href={`https://wa.me/92${SITE.phoneLocal.replace(/^0/, "")}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-full bg-surface px-5 py-2 text-xs font-semibold text-fg ring-1 ring-line transition hover:ring-primary/50"
+                    >
+                      WhatsApp Concierge ↗
+                    </a>
+                  </div>
+                </div>
+
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {article.keywords.map((kw) => (
+                    <span
+                      key={kw}
+                      className="rounded-md bg-bg px-2.5 py-1 text-[11px] text-muted ring-1 ring-line"
+                    >
+                      #{kw}
+                    </span>
+                  ))}
+                </div>
+              </article>
+            );
+          })}
         </section>
 
         <section className="bg-surface py-16">
