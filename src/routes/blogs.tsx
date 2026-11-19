@@ -21,7 +21,7 @@ interface BlogArticle {
   keyTakeaway: string;
 }
 
-const p: BlogArticle[] = [
+const BLOG_ARTICLES: BlogArticle[] = [
   {
     id: "demand-for-call-girls-in-karachi-trends",
     category: "Privacy & Rates",
@@ -602,7 +602,7 @@ const p: BlogArticle[] = [
     keyTakeaway:
       "Beat peak Demand for Call Girls in Karachi by messaging 0321 085 5593 early in the day to reserve your preferred evening window.",
   },
-,{
+  {
     id: "clifton-dha-vip-companionship-guide",
     category: "Clifton & DHA",
     datePublished: "2026-11-16",
@@ -635,7 +635,6 @@ const p: BlogArticle[] = [
     keyTakeaway:
       "Always confirm location sector (Clifton Block or DHA Phase) and preferred duration upfront on 0321 085 5593 for immediate, priority scheduling.",
   },
-
   {
     id: "five-star-hotel-outcalls-karachi",
     category: "5-Star Hotels",
@@ -800,7 +799,6 @@ function BlogsPage() {
       ? BLOG_ARTICLES
       : BLOG_ARTICLES.filter((article) => article.category === selectedCategory);
 
-  // Structured JSON-LD Schema for Rich Google Snippets (Blog + Articles + FAQs)
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -845,14 +843,12 @@ function BlogsPage() {
 
   return (
     <SiteShell>
-      {/* JSON-LD SEO Schema Injection */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
 
       <main>
-        {/* Native PageHero matching your About & Location pages */}
         <PageHero
           eyebrow="The Journal"
           title="Karachi Luxury & VIP Guides"
@@ -861,7 +857,6 @@ function BlogsPage() {
           compact
         />
 
-        {/* Category Filter & Quick Jump Index */}
         <section className="mx-auto max-w-6xl px-4 pt-14 md:px-8">
           <div className="flex flex-col gap-6 rounded-2xl bg-surface p-6 ring-1 ring-line md:flex-row md:items-center md:justify-between">
             <div>
@@ -894,7 +889,6 @@ function BlogsPage() {
             </div>
           </div>
 
-          {/* Quick Article Table of Contents (Boosts UX & Crawlability) */}
           <nav
             aria-label="Article index"
             className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"
@@ -906,7 +900,9 @@ function BlogsPage() {
                 className="group rounded-xl bg-surface p-5 ring-1 ring-line transition hover:ring-primary/50"
               >
                 <div className="flex items-center justify-between text-xs text-primary">
-                  <span>0{idx + 1} · {article.category}</span>
+                  <span>
+                    {String(idx + 1).padStart(2, "0")} · {article.category}
+                  </span>
                   <span className="text-muted">{article.readTime}</span>
                 </div>
                 <h3 className="mt-3 font-display text-lg leading-snug text-fg group-hover:text-primary">
@@ -920,7 +916,6 @@ function BlogsPage() {
           </nav>
         </section>
 
-        {/* Full Long-Form Articles Section (All indexed directly on /blogs) */}
         <section className="mx-auto max-w-4xl space-y-16 px-4 py-16 md:px-8">
           {filteredArticles.map((article) => (
             <article
@@ -928,7 +923,6 @@ function BlogsPage() {
               id={article.id}
               className="scroll-mt-28 rounded-2xl bg-surface p-6 ring-1 ring-line sm:p-10"
             >
-              {/* Meta Bar */}
               <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-wider text-primary">
                 <span className="rounded-full bg-bg px-3 py-1 ring-1 ring-primary/30">
                   {article.category}
@@ -941,7 +935,6 @@ function BlogsPage() {
                 <span className="text-muted">{article.readTime}</span>
               </div>
 
-              {/* Article Headline & Lead */}
               <h2 className="mt-4 font-display text-2xl leading-tight text-fg sm:text-4xl">
                 {article.title}
               </h2>
@@ -953,7 +946,6 @@ function BlogsPage() {
                 {article.lead}
               </p>
 
-              {/* Full Editorial Subsections */}
               <div className="mt-6 space-y-6">
                 {article.sections.map((sec) => (
                   <div key={sec.heading}>
@@ -965,7 +957,6 @@ function BlogsPage() {
                 ))}
               </div>
 
-              {/* Key Takeaway & Direct Action Strip */}
               <div className="mt-8 rounded-xl bg-bg p-5 ring-1 ring-primary/30">
                 <p className="text-xs font-semibold uppercase tracking-wider text-primary">
                   House Note
@@ -989,7 +980,6 @@ function BlogsPage() {
                 </div>
               </div>
 
-              {/* Semantic Keyword Tags */}
               <div className="mt-6 flex flex-wrap gap-2">
                 {article.keywords.map((kw) => (
                   <span
@@ -1004,7 +994,6 @@ function BlogsPage() {
           ))}
         </section>
 
-        {/* High-SEO Local FAQ Section */}
         <section className="bg-surface py-16">
           <div className="mx-auto max-w-4xl px-4 md:px-8">
             <p className="text-xs uppercase tracking-widest text-primary">
@@ -1024,10 +1013,8 @@ function BlogsPage() {
           </div>
         </section>
 
-        {/* Native Bottom Call-To-Action Band */}
         <CtaBand />
       </main>
     </SiteShell>
   );
 }
-
